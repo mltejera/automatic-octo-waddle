@@ -5,7 +5,7 @@ import { CustomStyleHooksContextValue_unstable as  CustomStyleHooksContextValue}
 
 
 
-export const useFancyButtonStyles = makeStyles({
+const useStyles = makeStyles({
     root: {
       // These are all unique to Fancy theme.
       border: '2px solid green', 
@@ -14,10 +14,10 @@ export const useFancyButtonStyles = makeStyles({
     },
   });
   
-  const useCustomButtonStyles = (state: unknown) => {
+export  const useFancyButtonStyles = (state: unknown) => {
     const buttonState = state as ButtonState;
   
-    const styles = useFancyButtonStyles();
+    const styles = useStyles();
   
     buttonState.root.className = mergeClasses(buttonState.root.className, styles.root);
   };
@@ -25,5 +25,5 @@ export const useFancyButtonStyles = makeStyles({
   
   
 export const FancyCustomStyleHooks: CustomStyleHooksContextValue = {
-    useButtonStyles_unstable: useCustomButtonStyles
+    useButtonStyles_unstable: useFancyButtonStyles
 };

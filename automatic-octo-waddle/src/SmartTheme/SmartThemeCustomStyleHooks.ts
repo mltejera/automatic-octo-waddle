@@ -5,16 +5,16 @@ import { CustomStyleHooksContextValue_unstable as  CustomStyleHooksContextValue}
 
 
 
-export const useSmartButtonStyles = makeStyles({
+const useStyles = makeStyles({
     root: {
       backgroundColor: 'yellow', // This is unique to smart and should win in conflicts with Fancy
     },
   });
   
-  export const useCustomButtonStyles = (state: unknown) => {
+  export const useSmartButtonStyles = (state: unknown) => {
     const buttonState = state as ButtonState;
   
-    const styles = useSmartButtonStyles();
+    const styles = useStyles();
   
     buttonState.root.className = mergeClasses(buttonState.root.className, styles.root);
   };
@@ -22,5 +22,5 @@ export const useSmartButtonStyles = makeStyles({
   
   
 export const SmartCustomStyleHooks: CustomStyleHooksContextValue = {
-    useButtonStyles_unstable: useCustomButtonStyles
+    useButtonStyles_unstable: useSmartButtonStyles
 };
