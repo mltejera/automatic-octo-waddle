@@ -7,9 +7,10 @@ import { CustomStyleHooksContextValue_unstable as  CustomStyleHooksContextValue}
 
 export const useFancyButtonStyles = makeStyles({
     root: {
-      border: '2px solid green', // this is shared between the two themes
-      backgroundColor: 'pink', // this is unique to the Fancy theme
-      borderRadius: '64px', // this is unique to the Fancy
+      // These are all unique to Fancy theme.
+      border: '2px solid green', 
+      backgroundColor: 'pink', 
+      borderRadius: '64px', 
     },
   });
   

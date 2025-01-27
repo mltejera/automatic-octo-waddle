@@ -33,7 +33,7 @@ function App() {
 
         <CustomStyleHooksProvider_unstable value={FancyCustomStyleHooks}>
           <Button>
-            I am a *Fancy* button with pink background and 64px border radius
+            I am a *Fancy* button with pink background and other fancy styles
           </Button>
         </CustomStyleHooksProvider_unstable>
 
@@ -44,7 +44,7 @@ function App() {
         <CustomStyleHooksProvider_unstable value={SmancyCustomStyleHooks}>
           <Button>
             I am a *Smancy* button. I should be both smart and fancy. Smart
-            styles win when there is a conflict.git
+            styles win when there is a conflict.
           </Button>
         </CustomStyleHooksProvider_unstable>
       </div>
