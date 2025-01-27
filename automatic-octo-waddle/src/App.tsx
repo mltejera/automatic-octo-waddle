@@ -44,7 +44,7 @@ function App() {
         <CustomStyleHooksProvider_unstable value={SmancyCustomStyleHooks}>
           <Button>
             I am a *Smancy* button. I should be both smart and fancy. Smart
-            styles win when there is a conflict.
+            styles win when there is a conflict.git
           </Button>
         </CustomStyleHooksProvider_unstable>
       </div>
