@@ -9,6 +9,9 @@ const useStyles = makeStyles({
     root: {
       backgroundColor: 'yellow', // This is unique to smart and should win in conflicts with Fancy
     },
+    icon: {
+      color: 'red'
+    }
   });
   
   export const useSmartButtonStyles = (state: unknown) => {
@@ -17,6 +20,9 @@ const useStyles = makeStyles({
     const styles = useStyles();
   
     buttonState.root.className = mergeClasses(buttonState.root.className, styles.root);
+    if (buttonState.icon) {
+      buttonState.icon.className = mergeClasses(buttonState.icon.className, styles.icon);
+    }
   };
   
   

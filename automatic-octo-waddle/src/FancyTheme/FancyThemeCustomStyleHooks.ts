@@ -12,6 +12,10 @@ const useStyles = makeStyles({
       backgroundColor: 'pink', 
       borderRadius: '64px', 
     },
+    icon: {
+      color: 'blue',
+      backgroundColor: 'white',
+    }
   });
   
 export  const useFancyButtonStyles = (state: unknown) => {
@@ -20,6 +24,10 @@ export  const useFancyButtonStyles = (state: unknown) => {
     const styles = useStyles();
   
     buttonState.root.className = mergeClasses(buttonState.root.className, styles.root);
+
+    if (buttonState.icon) {
+      buttonState.icon.className = mergeClasses(buttonState.icon.className, styles.icon);
+    }
   };
   
   

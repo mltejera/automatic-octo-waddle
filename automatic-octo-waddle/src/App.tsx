@@ -9,6 +9,7 @@ import {
 import { FancyCustomStyleHooks } from "./FancyTheme/FancyThemeCustomStyleHooks";
 import { SmartCustomStyleHooks } from "./SmartTheme/SmartThemeCustomStyleHooks";
 import { SmancyCustomStyleHooks } from "./SmancyTheme/SmancyThemeCustomStyleHooks";
+import { AlertRegular } from "@fluentui/react-icons";
 
 const useAppStyles = makeStyles({
   app: {
@@ -32,17 +33,19 @@ function App() {
         <Button>I am a Vanilla Fluent Button</Button>
 
         <CustomStyleHooksProvider_unstable value={FancyCustomStyleHooks}>
-          <Button>
+          <Button icon={<AlertRegular />}>
             I am a *Fancy* button with pink background and other fancy styles
           </Button>
         </CustomStyleHooksProvider_unstable>
 
         <CustomStyleHooksProvider_unstable value={SmartCustomStyleHooks}>
-          <Button>I am a *Smart* button with yellow background</Button>
+          <Button icon={<AlertRegular />}>
+            I am a *Smart* button with yellow background
+          </Button>
         </CustomStyleHooksProvider_unstable>
 
         <CustomStyleHooksProvider_unstable value={SmancyCustomStyleHooks}>
-          <Button>
+          <Button icon={<AlertRegular />}>
             I am a *Smancy* button. I should be both smart and fancy. Smart
             styles win when there is a conflict.
           </Button>
